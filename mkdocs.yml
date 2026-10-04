@@ -46,6 +46,7 @@ extra_css:
 nav:
   - 首页: index.md
   - 学习路线: syllabus.md
+  - 学习路径: learning-paths.md
   - 知识地图: knowledge-map.md
   - 基础:
       - 概率基础: 00-foundations/01-probability-basics.md
@@ -65,5 +66,10 @@ nav:
       - VaR 与 CVaR: 07-portfolio-risk/02-var-cvar.md
   - 时间序列:
       - 金融时间序列与波动率: 08-time-series/01-financial-time-series.md
+  - 计算机科学: 09-computer-science/index.md
+  - 运筹学与组合优化: 10-operations-research/index.md
+  - 机器学习与时间序列: 11-machine-learning/index.md
+  - 策略研究: 12-strategies/index.md
+  - 综合实验: 13-capstones/index.md
   - 参考文献: references.md
   - 术语表: glossary.md
