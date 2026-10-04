@@ -2,7 +2,7 @@
 
 **QFI** 是一个中文优先、可复现、可引用的量化金融数学知识库。
 
-从概率论、随机过程和随机微积分出发，逐步学习资产定价、衍生品定价、数值方法、投资组合和风险管理。每个主题都配有数学推导、金融解释、Python 示例、可展开的练习答案和可验证结果。
+从概率论、随机过程和随机微积分出发，逐步学习资产定价、衍生品定价、数值方法、投资组合和风险管理，并继续连接计算机科学、运筹学、组合优化、机器学习和策略研究。每个主题都配有数学推导、金融解释、Python 示例、可展开的练习答案和可验证结果。
 
 ## 适合谁
 
@@ -12,15 +12,17 @@
 
 ## 学习路线
 
-数学基础 → 概率统计 → 随机过程 → 随机微积分 → 资产定价 → 衍生品 → 数值方法 → 投资组合与风险管理
+数学基础 → 概率统计 → 随机过程 → 随机微积分 → 资产定价 → 衍生品 → 对冲 → 数值方法 → 投资组合与风险管理 → 时间序列 → 策略研究
 
-完整路线见 [学习路线](docs/syllabus.md)。
+完整路线见 [学习路径](docs/learning-paths.md) 和 [学习路线](docs/syllabus.md)。
 
 知识之间的依赖和推荐阅读顺序见 [知识地图](docs/knowledge-map.md)。
 
 ## 当前状态
 
-项目处于 `v0.3.0` 初始阶段。当前内容覆盖概率、随机过程、Itô 引理、资产定价、Black–Scholes、Greeks、Monte Carlo、组合优化、VaR/CVaR 和时间序列。
+项目当前版本为 `v0.4.0`。核心垂直知识链已经覆盖 Black–Scholes、Greeks、Delta 对冲、Monte Carlo 和 VaR/CVaR；知识域还包括概率、随机过程、Itô 引理、Markowitz、金融时间序列、计算机科学、运筹学、机器学习、策略研究和综合实验。
+
+知识体系使用统一的 `domain`、`skills`、`level`、`prerequisites`、`related` 和 `next` 元数据，并通过[知识地图](docs/knowledge-map.md)把数学推导、金融含义、代码实现和研究项目连接起来。
 
 ## 本地运行
 
@@ -36,21 +38,24 @@ mkdocs serve
 运行检查：
 
 ```bash
-pytest -q
-mkdocs build --strict
+python3 -m pytest -q
+python3 -m ruff check .
+python3 -m mkdocs build --strict
 ```
 
 ## 章节规范
 
-每篇内容尽量包含：
+每篇正式知识页遵循 [知识页模板](docs/article-template.md)，包含：
 
 1. 学习目标和前置知识
 2. 符号、定义和假设
-3. 定理、证明或证明思路
+3. 定理、完整证明或明确标注的证明依赖
 4. 金融解释和适用条件
 5. 数值例题与 Python 实现
 6. 数值稳定性、边界和常见误区
-7. 练习题与参考文献
+7. 练习题、逐步答案与参考文献
+
+第一条垂直知识链的综合实验见 [Black-Scholes 与对冲风险实验](docs/13-capstones/01-option-risk-lab.md)；组合优化、尾部风险和样本外验证见 [CVaR 组合优化实验](docs/13-capstones/02-cvar-portfolio-lab.md)。
 
 网页中的公式使用 Markdown 内的 LaTeX 语法，并由 MathJax 渲染。参考文献标题直接链接到出版社、期刊 DOI 或作者机构页面；练习答案默认折叠在题目下方，点击“练习答案与推导”即可展开。
 

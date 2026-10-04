@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0] - 2026-10-04
+
+- 建立面向数学、计算机、金融、运筹学和机器学习学生的跨域知识架构与学习路径
+- 增加 Delta 对冲模拟、输入契约、可复现种子和完整测试
+- 深化 Black–Scholes、Greeks、Monte Carlo、Markowitz、VaR/CVaR 和时间序列的推导与验证
+- 增加策略研究工作流、Black-Scholes 对冲风险实验和 CVaR 组合优化实验
+- 统一页面元数据、知识关联、练习答案和完整代码规范
+
 ## [0.3.0] - 2026-10-04
 
 - 添加 Greeks、Markowitz 投资组合优化、VaR/CVaR 和金融时间序列章节

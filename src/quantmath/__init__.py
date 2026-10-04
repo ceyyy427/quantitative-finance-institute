@@ -1,6 +1,6 @@
 """Reusable code for the Quantitative Finance Institute."""
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 from .hedging import DeltaHedgeResult, simulate_delta_hedge
 

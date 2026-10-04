@@ -2,7 +2,7 @@ from quantmath import DeltaHedgeResult, __version__, simulate_delta_hedge
 
 
 def test_package_version():
-    assert __version__ == "0.3.0"
+    assert __version__ == "0.4.0"
 
 
 def test_public_hedging_api():
