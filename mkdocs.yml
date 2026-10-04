@@ -70,7 +70,12 @@ nav:
   - 计算机科学: 09-computer-science/index.md
   - 运筹学与组合优化: 10-operations-research/index.md
   - 机器学习与时间序列: 11-machine-learning/index.md
-  - 策略研究: 12-strategies/index.md
-  - 综合实验: 13-capstones/index.md
+  - 策略研究:
+      - 领域总览: 12-strategies/index.md
+      - 研究工作流: 12-strategies/01-research-workflow.md
+  - 综合实验:
+      - 项目总览: 13-capstones/index.md
+      - Black-Scholes 与对冲风险实验: 13-capstones/01-option-risk-lab.md
+      - CVaR 组合优化实验: 13-capstones/02-cvar-portfolio-lab.md
   - 参考文献: references.md
   - 术语表: glossary.md
