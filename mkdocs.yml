@@ -59,6 +59,7 @@ nav:
   - 衍生品:
       - Black–Scholes 公式: 05-derivatives/01-black-scholes.md
       - Greeks 与敏感度: 05-derivatives/02-greeks.md
+      - Delta 对冲: 05-derivatives/03-delta-hedging.md
   - 数值方法:
       - Monte Carlo 定价: 06-numerical/01-monte-carlo-pricing.md
   - 组合与风险:
