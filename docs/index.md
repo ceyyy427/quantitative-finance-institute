@@ -9,3 +9,5 @@
 - 先阅读 [学习路线](syllabus.md)
 - 从 [概率基础](00-foundations/01-probability-basics.md) 开始
 - 查阅 [中英术语表](glossary.md)
+- 所有公式使用 LaTeX 编写，并由 [MathJax](https://www.mathjax.org/) 在网页中渲染
+- 参考书和论文见 [参考文献](references.md)，章节中的文献标题可以直接点击

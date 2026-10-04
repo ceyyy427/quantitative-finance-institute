@@ -49,7 +49,55 @@ $$
 2. 对执行价 $K=100$ 的看涨期权计算一期价格。
 3. 证明风险中性公式与复制组合价格相同。
 
+??? success "练习答案与推导"
+
+    **1. 风险中性概率**
+
+    代入 $u=1.2,d=0.9,R=1.05$：
+
+    $$
+    q=\frac{1.05-0.9}{1.2-0.9}=\frac{0.15}{0.30}=0.5.
+    $$
+
+    同时 $0.9<1.05<1.2$，所以无套利条件成立。
+
+    **2. 一期看涨期权价格**
+
+    $S_0=100,K=100$ 时，上涨状态的支付是
+
+    $$
+    V_u=(120-100)^+=20,
+    $$
+
+    下跌状态的支付是 $V_d=(90-100)^+=0$。所以
+
+    $$
+    V_0=\frac{1}{1.05}(0.5\times20+0.5\times0)
+    =\frac{10}{1.05}\approx9.5238.
+    $$
+
+    **3. 两种定价方法相同**
+
+    复制组合满足
+
+    $$
+    \Delta=\frac{V_u-V_d}{S_0(u-d)},
+    \qquad
+    B=\frac{uV_d-dV_u}{R(u-d)}.
+    $$
+
+    其初始成本为 $\Delta S_0+B$。整理分子：
+
+    $$
+    \Delta S_0+B
+    =\frac{R-d}{R(u-d)}V_u+\frac{u-R}{R(u-d)}V_d
+    =\frac1R\left(qV_u+(1-q)V_d\right).
+    $$
+
+    这正是风险中性定价公式。
+
 ## 参考文献
 
-- Sheldon M. Ross, *An Elementary Introduction to Mathematical Finance*, 第 3 版。
-- John C. Hull, *Options, Futures, and Other Derivatives*。
+- [Sheldon M. Ross, *An Elementary Introduction to Mathematical Finance*, 第 3 版](https://www.cambridge.org/highereducation/books/an-elementary-introduction-to-mathematical-finance/D55C7660A848D01109E19BE6C77C31F8)。
+- [John C. Hull, *Options, Futures, and Other Derivatives*, 11th edition](https://www.pearson.com/en-gb/subject-catalog/p/options-futures-and-other-derivatives-global-edition/P200000004519/9781292410654)。
+- 更多资料见[参考文献总表](../references.md)。

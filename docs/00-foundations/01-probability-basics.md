@@ -60,7 +60,50 @@ print(samples.mean())
 2. 给出一个 $E[g(X)] \ne g(E[X])$ 的例子。
 3. 解释条件期望为什么适合表示“在当前信息下的合理预测”。
 
+??? success "练习答案与推导"
+
+    **1. Bernoulli$(p)$ 的期望和方差**
+
+    令 $X=1$ 的概率为 $p$，$X=0$ 的概率为 $1-p$。于是
+
+    $$
+    E[X]=1\cdot p+0\cdot(1-p)=p.
+    $$
+
+    因为 $X^2=X$，所以 $E[X^2]=p$。代入方差公式得到
+
+    $$
+    \operatorname{Var}(X)=E[X^2]-E[X]^2=p-p^2=p(1-p).
+    $$
+
+    **2. $E[g(X)]$ 不一定等于 $g(E[X])$**
+
+    取 $X$ 以相同概率取 $-1$ 和 $1$，并令 $g(x)=x^2$。此时
+
+    $$
+    E[X]=0,\qquad g(E[X])=0^2=0,
+    $$
+
+    但
+
+    $$
+    E[g(X)]=E[X^2]=1.
+    $$
+
+    差异来自“先取平均再平方”和“先平方再取平均”是两个不同的操作。
+
+    **3. 为什么条件期望表示当前信息下的预测**
+
+    给定信息集合 $\mathcal F_t$ 后，$E[X\mid\mathcal F_t]$ 是一个只依赖当前信息的随机变量。它满足
+
+    $$
+    E\left[(X-E[X\mid\mathcal F_t])Y\right]=0
+    $$
+
+    对所有有界且 $\mathcal F_t$-可测的 $Y$ 成立。这表示预测误差与当前已知信息正交，因此在平方损失下，它是当前信息集中的最佳预测。
+
 ## 参考文献
 
-- Sheldon M. Ross, *A First Course in Probability*。
-- Steven E. Shreve, *Stochastic Calculus for Finance II*。
+- [Sheldon M. Ross, *A First Course in Probability*](https://www.pearson.com/en-us/subject-catalog/p/first-course-in-probability-a/P200000006334/9780138099589)。
+- [Steven E. Shreve, *Stochastic Calculus for Finance II*](https://link.springer.com/book/9780387401010)。
+- 更多资料见[参考文献总表](../references.md)。

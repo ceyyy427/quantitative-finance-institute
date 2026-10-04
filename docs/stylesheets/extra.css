@@ -1,0 +1,10 @@
+.arithmatex {
+  overflow-x: auto;
+  padding: 0.35rem 0;
+}
+
+.arithmatex mjx-container[display="true"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+}

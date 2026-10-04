@@ -20,6 +20,7 @@
 - 二叉树与 Black–Scholes
 - Monte Carlo、有限差分和模型校准
 - 当前章节：[二叉树与风险中性定价](03-asset-pricing/01-binomial-risk-neutral.md)、[Black–Scholes](05-derivatives/01-black-scholes.md)
+- 当前章节：[Monte Carlo 定价](06-numerical/01-monte-carlo-pricing.md)
 
 ## 第四阶段：组合与风险
 

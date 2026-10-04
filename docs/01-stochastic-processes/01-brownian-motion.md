@@ -82,7 +82,44 @@ print(prices[-1])
 2. 解释为什么把一年切成 252 个交易日时，单步波动标准差应使用 $\sigma/\sqrt{252}$。
 3. 改变 `sigma` 并比较终值分布，而不是只比较一条模拟路径。
 
+??? success "练习答案与推导"
+
+    **1. 证明 $W_t\sim N(0,t)$**
+
+    由 Brownian motion 的独立增量定义，$W_t-W_0$ 服从均值为 $0$、方差为 $t-0=t$ 的正态分布。又因为 $W_0=0$，所以
+
+    $$
+    W_t=W_t-W_0\sim N(0,t).
+    $$
+
+    **2. 交易日离散化**
+
+    在单步 $\Delta t=1/252$ 下，GBM 的随机项为 $\sigma\Delta W$。因为
+
+    $$
+    \Delta W\sim N(0,\Delta t),
+    $$
+
+    所以随机项的标准差是
+
+    $$
+    \sigma\sqrt{\Delta t}=\frac{\sigma}{\sqrt{252}}.
+    $$
+
+    直接除以 $252$ 会把方差缩小得过快。
+
+    **3. 比较终值分布**
+
+    对固定 $S_0,\mu,T$，GBM 的终值满足
+
+    $$
+    \log S_T\sim N\left(\log S_0+(\mu-\tfrac12\sigma^2)T,\;\sigma^2T\right).
+    $$
+
+    因此增大 `sigma` 会增加终值的离散程度。比较多条路径的分位数或直方图，才能观察到这种分布变化。
+
 ## 参考文献
 
-- Sheldon M. Ross, *An Elementary Introduction to Mathematical Finance*, 第 3 版。
-- Steven E. Shreve, *Stochastic Calculus for Finance II*。
+- [Sheldon M. Ross, *An Elementary Introduction to Mathematical Finance*, 第 3 版](https://www.cambridge.org/highereducation/books/an-elementary-introduction-to-mathematical-finance/D55C7660A848D01109E19BE6C77C31F8)。
+- [Steven E. Shreve, *Stochastic Calculus for Finance II*](https://link.springer.com/book/9780387401010)。
+- 更多资料见[参考文献总表](../references.md)。

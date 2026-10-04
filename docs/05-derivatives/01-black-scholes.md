@@ -60,6 +60,57 @@ print(call, put)
 
 对于这组输入，看涨期权价格约为 $10.4506$。仓库中的测试还验证了参考值和 put–call parity。
 
+## 练习
+
+1. 对 $S_0=K=100,r=0.05,\sigma=0.20,T=1$，计算 $d_1,d_2$ 并解释价格 $10.4506$ 的来源。
+2. 用 put–call parity 计算相同参数下的欧式看跌期权价格。
+3. 说明在其他参数固定时，波动率上升为什么会提高欧式看涨期权的价值。
+
+??? success "练习答案与推导"
+
+    **1. 计算 $d_1,d_2$**
+
+    因为 $S_0=K$，所以 $\ln(S_0/K)=0$。于是
+
+    $$
+    d_1=\frac{(0.05+0.5\times0.2^2)\times1}{0.2}=0.35,
+    \qquad d_2=0.35-0.2=0.15.
+    $$
+
+    查标准正态分布表，$N(0.35)\approx0.6368$、$N(0.15)\approx0.5596$。代回公式：
+
+    $$
+    C\approx100(0.6368)-100e^{-0.05}(0.5596)\approx10.45.
+    $$
+
+    代码使用更高精度的正态分布函数，得到约 $10.4506$。
+
+    **2. 计算看跌期权价格**
+
+    先计算行权价现值：
+
+    $$
+    Ke^{-rT}=100e^{-0.05}\approx95.1229.
+    $$
+
+    因此
+
+    $$
+    P=C-S_0+Ke^{-rT}
+    \approx10.4506-100+95.1229
+    \approx5.5735.
+    $$
+
+    **3. 波动率与看涨期权价值**
+
+    欧式看涨期权的支付 $(S_T-K)^+$ 是股票终值的凸函数。提高波动率会在保持风险中性均值结构的同时增加 $S_T$ 的离散程度，而凸函数对离散程度更敏感。因此其风险中性期望现值上升。严格证明可以对 Black–Scholes 公式对 $\sigma$ 求导，得到 Vega：
+
+    $$
+    \frac{\partial C}{\partial\sigma}=S_0\phi(d_1)\sqrt{T}>0,
+    $$
+
+    其中 $\phi$ 是标准正态密度。
+
 ## 风险与误差
 
 - 隐含波动率依赖执行价和到期时间，市场通常存在 volatility smile 或 skew。
@@ -69,6 +120,7 @@ print(call, put)
 
 ## 参考文献
 
-- Sheldon M. Ross, *An Elementary Introduction to Mathematical Finance*, 第 3 版。
-- Fischer Black and Myron Scholes, “The Pricing of Options and Corporate Liabilities”。
-- Steven E. Shreve, *Stochastic Calculus for Finance II*。
+- [Sheldon M. Ross, *An Elementary Introduction to Mathematical Finance*, 第 3 版](https://www.cambridge.org/highereducation/books/an-elementary-introduction-to-mathematical-finance/D55C7660A848D01109E19BE6C77C31F8)。
+- [Fischer Black and Myron Scholes, “The Pricing of Options and Corporate Liabilities”](https://doi.org/10.1086/260062)。
+- [Steven E. Shreve, *Stochastic Calculus for Finance II*](https://link.springer.com/book/9780387401010)。
+- 更多资料见[参考文献总表](../references.md)。
