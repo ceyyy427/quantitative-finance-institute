@@ -22,6 +22,8 @@
 | [运筹学与组合优化](10-operations-research/index.md) | [Markowitz 优化](07-portfolio-risk/01-markowitz-optimization.md) | 目标函数和约束决定可行组合 |
 | [机器学习与时间序列](11-machine-learning/index.md) | [策略研究](12-strategies/index.md) | 时间序列验证控制预测到交易的泄露 |
 | [策略研究](12-strategies/index.md) | [综合实验](13-capstones/index.md) | 研究闭环把模型、代码和风险报告连接起来 |
+| [Delta 对冲](05-derivatives/03-delta-hedging.md) | [Black-Scholes 与对冲风险实验](13-capstones/01-option-risk-lab.md) | 把 Greeks、动态持仓和尾部风险放入同一实验 |
+| [VaR 与 CVaR](07-portfolio-risk/02-var-cvar.md) | [CVaR 组合优化实验](13-capstones/02-cvar-portfolio-lab.md) | 把尾部风险表示转成组合优化目标 |
 
 ## 按问题选择入口
 
