@@ -48,6 +48,7 @@ nav:
   - 学习路线: syllabus.md
   - 学习路径: learning-paths.md
   - 桥梁型课程地图: bridge-curriculum.md
+  - 文献应用指南: literature-guide.md
   - 知识地图: knowledge-map.md
   - 基础:
       - 概率基础: 00-foundations/01-probability-basics.md
@@ -75,7 +76,9 @@ nav:
       - 领域总览: 14-ai-foundations/index.md
       - 梯度下降与反向传播: 14-ai-foundations/01-gradient-descent-and-backprop.md
   - 生物医药数据科学: 15-biomedical-data/index.md
-  - 应用运筹学与产业决策: 16-applied-operations/index.md
+  - 应用运筹学与产业决策:
+      - 领域总览: 16-applied-operations/index.md
+      - Bellman 方程与动态规划: 16-applied-operations/01-bellman-dynamic-programming.md
   - 策略研究:
       - 领域总览: 12-strategies/index.md
       - 研究工作流: 12-strategies/01-research-workflow.md
