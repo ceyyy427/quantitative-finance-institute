@@ -41,4 +41,12 @@ nav:
   - 学习路线: syllabus.md
   - 基础:
       - 概率基础: 00-foundations/01-probability-basics.md
+  - 随机模型:
+      - Brownian motion: 01-stochastic-processes/01-brownian-motion.md
+  - 随机微积分:
+      - Itô 引理: 02-stochastic-calculus/01-ito-lemma.md
+  - 资产定价:
+      - 二叉树与风险中性定价: 03-asset-pricing/01-binomial-risk-neutral.md
+  - 衍生品:
+      - Black–Scholes 公式: 05-derivatives/01-black-scholes.md
   - 术语表: glossary.md

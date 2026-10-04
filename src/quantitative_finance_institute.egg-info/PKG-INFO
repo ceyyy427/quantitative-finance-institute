@@ -1,3 +1,23 @@
+Metadata-Version: 2.4
+Name: quantitative-finance-institute
+Version: 0.2.0
+Summary: Reusable examples for the Quantitative Finance Institute knowledge base
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE-CODE
+Requires-Dist: numpy>=1.26
+Requires-Dist: scipy>=1.11
+Requires-Dist: pandas>=2.1
+Requires-Dist: matplotlib>=3.8
+Provides-Extra: dev
+Requires-Dist: mkdocs-material>=9.5; extra == "dev"
+Requires-Dist: mkdocs>=1.6; extra == "dev"
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Requires-Dist: jupyter>=1.0; extra == "dev"
+Dynamic: license-file
+
 # Quantitative Finance Institute
 
 **QFI** 是一个中文优先、可复现、可引用的量化金融数学知识库。
