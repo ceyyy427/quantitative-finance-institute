@@ -25,6 +25,11 @@
 | [桥梁型课程地图](bridge-curriculum.md) | [AI 基础模型与学习理论](14-ai-foundations/index.md) | 数学定义、优化和工程实现形成共同必修 |
 | [AI 基础模型与学习理论](14-ai-foundations/index.md) | [生物医药数据科学](15-biomedical-data/index.md) | 高维统计、机器学习和可复现工程迁移到生物数据 |
 | [AI 基础模型与学习理论](14-ai-foundations/index.md) | [应用运筹学与产业决策](16-applied-operations/index.md) | 预测模型连接到约束决策与系统优化 |
+| [Transformer 数学原理](14-ai-foundations/02-transformer-mathematics.md) | [生成式模型与扩散模型](14-ai-foundations/03-diffusion-models.md) | 注意力表示连接到条件生成与采样 |
+| [统计基因组学](15-biomedical-data/01-statistical-genomics.md) | [高维数据挖掘](15-biomedical-data/02-high-dimensional-data-mining.md) | 多重检验和降维共同处理小样本高维矩阵 |
+| [Bellman 方程与动态规划](16-applied-operations/01-bellman-dynamic-programming.md) | [供应链和库存控制](16-applied-operations/02-supply-chain-inventory.md) | 状态、动作和未来成本构成库存决策 |
+| [路径规划](16-applied-operations/03-routing-path-planning.md) | [制造排程](16-applied-operations/05-manufacturing-scheduling.md) | 图搜索基准连接到资源约束和作业顺序 |
+| [量子计算](17-quantum-computing/index.md) | [机器学习优化](14-ai-foundations/05-optimizers-and-nonconvex.md) | 线性代数和优化是量子算法与经典训练的共同语言 |
 | [Delta 对冲](05-derivatives/03-delta-hedging.md) | [Black-Scholes 与对冲风险实验](13-capstones/01-option-risk-lab.md) | 把 Greeks、动态持仓和尾部风险放入同一实验 |
 | [VaR 与 CVaR](07-portfolio-risk/02-var-cvar.md) | [CVaR 组合优化实验](13-capstones/02-cvar-portfolio-lab.md) | 把尾部风险表示转成组合优化目标 |
 
@@ -43,6 +48,10 @@
 | 怎样学习 AI 的数学原理并完成工程实现？ | [AI 基础模型与学习理论](14-ai-foundations/index.md) | [梯度下降与反向传播](14-ai-foundations/01-gradient-descent-and-backprop.md) |
 | 怎样把高维数据方法用于生物医药？ | [生物医药数据科学](15-biomedical-data/index.md) | [AI 基础模型与学习理论](14-ai-foundations/index.md) |
 | 怎样把优化用于供应链、定价和排程？ | [应用运筹学与产业决策](16-applied-operations/index.md) | [运筹学与组合优化](10-operations-research/index.md) |
+| 怎样理解基础模型的核心计算？ | [Transformer 数学原理](14-ai-foundations/02-transformer-mathematics.md) | [生成式模型与扩散模型](14-ai-foundations/03-diffusion-models.md) |
+| 怎样把高维基因数据变成可检验结论？ | [统计基因组学](15-biomedical-data/01-statistical-genomics.md) | [高维数据挖掘](15-biomedical-data/02-high-dimensional-data-mining.md) |
+| 怎样从库存、路线和生产约束得到可执行计划？ | [供应链和库存控制](16-applied-operations/02-supply-chain-inventory.md) | [制造排程](16-applied-operations/05-manufacturing-scheduling.md) |
+| 怎样把量子态表示和数值代码联系起来？ | [单量子比特与线性代数](17-quantum-computing/01-quantum-linear-algebra.md) | [优化器与非凸优化](14-ai-foundations/05-optimizers-and-nonconvex.md) |
 
 ## 每篇文章的关联结构
 

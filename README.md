@@ -20,7 +20,7 @@
 
 ## 当前状态
 
-项目当前版本为 `v0.5.0`。核心垂直知识链已经覆盖 Black–Scholes、Greeks、Delta 对冲、Monte Carlo 和 VaR/CVaR；桥梁课程新增 AI 基础模型与学习理论、生物医药数据科学、应用运筹学与产业决策。
+项目当前版本为 `v0.5.0`。核心垂直知识链已经覆盖 Black–Scholes、Greeks、Delta 对冲、Monte Carlo 和 VaR/CVaR；桥梁课程继续扩展 Transformer、扩散模型、强化学习、非凸优化、统计基因组学、高维数据、供应链、路径规划、收益管理、制造排程和量子计算。
 
 知识体系使用统一的 `domain`、`skills`、`level`、`prerequisites`、`related` 和 `next` 元数据，并通过[知识地图](docs/knowledge-map.md)把数学推导、金融含义、代码实现和研究项目连接起来。
 
@@ -57,7 +57,7 @@ python3 -m mkdocs build --strict
 6. 数值稳定性、边界和常见误区
 7. 练习题、逐步答案与参考文献
 
-第一条垂直知识链的综合实验见 [Black-Scholes 与对冲风险实验](docs/13-capstones/01-option-risk-lab.md)；组合优化、尾部风险和样本外验证见 [CVaR 组合优化实验](docs/13-capstones/02-cvar-portfolio-lab.md)。
+第一条垂直知识链的综合实验见 [Black-Scholes 与对冲风险实验](docs/13-capstones/01-option-risk-lab.md)；组合优化、尾部风险和样本外验证见 [CVaR 组合优化实验](docs/13-capstones/02-cvar-portfolio-lab.md)；预测、统计、风险和运营决策的统一验收见 [跨领域完整实验](docs/13-capstones/03-bridge-lab.md)。
 
 网页中的公式使用 Markdown 内的 LaTeX 语法，并由 MathJax 渲染。参考文献标题直接链接到出版社、期刊 DOI 或作者机构页面；练习答案默认折叠在题目下方，点击“练习答案与推导”即可展开。
 

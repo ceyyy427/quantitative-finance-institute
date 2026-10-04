@@ -21,6 +21,8 @@
 5. [Bollerslev, “Generalized Autoregressive Conditional Heteroskedasticity”](https://doi.org/10.1016/0304-4076(86)90063-1)。
 6. [Benjamini and Hochberg, “Controlling the False Discovery Rate”](https://doi.org/10.1111/j.2517-6161.1995.tb02031.x)。
 7. [Rockafellar and Uryasev, “Optimization of Conditional Value-at-Risk”](https://doi.org/10.21314/JOR.2000.038)。
+8. [Richard Bellman, *Dynamic Programming*](https://www.princeton.edu/~erp/ERParchives/archivepdfs/M139.pdf)。
+9. [Sutton and Barto, *Reinforcement Learning: An Introduction*](https://mitpress.mit.edu/9780262039246/reinforcement-learning/)。
 
 ## 使用说明
 

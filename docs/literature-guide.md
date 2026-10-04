@@ -31,21 +31,21 @@ next: [梯度下降与反向传播]
 
 - **原文：** [Vaswani et al., “Attention Is All You Need”, NeurIPS (2017)](https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
 - **核心数学：** 查询、键、值的矩阵乘法、缩放点积注意力、掩码和复杂度。
-- **本站应用：** 后续章节将从矩阵形状和一个两 token 手算例子开始，再实现最小注意力层。
+- **本站应用：** [Transformer 数学原理](14-ai-foundations/02-transformer-mathematics.md)从矩阵形状和因果掩码开始，实现最小注意力层并检查 softmax 权重。
 - **跨域迁移：** 注意力可以处理时间序列、订单流、基因序列和文本，但必须重新定义时间泄露、批次和评估指标。
 
 ### Diffusion models
 
 - **原文：** [Ho, Jain and Abbeel, “Denoising Diffusion Probabilistic Models”, NeurIPS (2020), arXiv](https://arxiv.org/abs/2006.11239)
 - **核心数学：** 前向加噪马尔可夫链、反向去噪过程、变分下界和 score matching 的联系。
-- **本站应用：** 后续章节将把扩散过程连接到随机微分方程和 Monte Carlo，并实现一维分布的训练与采样。
+- **本站应用：** [生成式模型与扩散模型](14-ai-foundations/03-diffusion-models.md)实现闭式前向加噪，并明确反向采样、噪声日程和分布评估的剩余工作。
 - **跨域迁移：** 可用于金融情景生成和生物信号模拟，但生成样本必须通过分布、尾部和业务约束检查。
 
 ### Reinforcement learning
 
 - **教材：** [Sutton and Barto, *Reinforcement Learning: An Introduction*, 2nd edition](https://mitpress.mit.edu/9780262039246/reinforcement-learning/)
 - **核心数学：** 马尔可夫决策过程、Bellman 方程、价值函数、策略评估和探索。
-- **本站应用：** 强化学习页面将先用有限状态 MDP 手算 value iteration，再实现 Q-learning 并比较动态规划基准。
+- **本站应用：** [强化学习理论](14-ai-foundations/04-reinforcement-learning-theory.md)先用有限状态 MDP 对比 value iteration，再说明 Q-learning、策略梯度和离线评估要求。
 - **跨域迁移：** 可连接动态定价、库存控制、交易执行和治疗策略，但必须明确奖励函数、约束和离线数据偏差。
 
 ## 金融与风险
@@ -70,8 +70,12 @@ next: [梯度下降与反向传播]
 
 - **原文：** [Benjamini and Hochberg, “Controlling the False Discovery Rate”, JRSS B (1995)](https://doi.org/10.1111/j.2517-6161.1995.tb02031.x)
 - **核心数学：** 多重检验、排序后的 p 值阈值和错误发现率控制。
-- **本站应用：** 统计基因组学章节将用模拟 p 值展示 FDR 与逐个检验的差异，并报告检验假设。
+- **本站应用：** [统计基因组学](15-biomedical-data/01-statistical-genomics.md)用模拟 p 值展示 FDR，并把批次效应、独立验证和隐私风险写入实验协议。
 - **跨域迁移：** 多重比较思想也适用于因子挖掘和策略筛选，防止把偶然显著当成稳定规律。
+
+### 高维降维与验证
+
+- **本站应用：** [高维数据挖掘](15-biomedical-data/02-high-dimensional-data-mining.md)从 SVD/PCA 的最佳低秩近似出发，说明标准化、降维和交叉验证的时间边界。
 
 ## 运筹学与动态决策
 
@@ -79,7 +83,7 @@ next: [梯度下降与反向传播]
 
 - **原文：** [Bellman, *Dynamic Programming* (1957), Princeton University Press archive](https://www.princeton.edu/~erp/ERParchives/archivepdfs/M139.pdf)
 - **核心数学：** 状态、动作、价值函数和 Bellman 最优性原理。
-- **本站应用：** 应用运筹学章节将用库存、路径和收益管理的有限状态例子完整演算，再连接强化学习。
+- **本站应用：** [供应链和库存控制](16-applied-operations/02-supply-chain-inventory.md)、[路径规划](16-applied-operations/03-routing-path-planning.md)和[收益管理与动态定价](16-applied-operations/04-revenue-management-pricing.md)把 Bellman 语言迁移到库存、图搜索和容量决策。
 - **当前示范：** [Bellman 方程与动态规划](16-applied-operations/01-bellman-dynamic-programming.md)给出压缩性证明和完整 value iteration 代码。
 - **跨域迁移：** 动态规划是交易执行、生产排程、库存补货和治疗策略的共同语言。
 

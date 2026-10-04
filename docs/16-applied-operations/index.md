@@ -8,7 +8,7 @@ skills: [线性规划, 整数规划, 动态规划, 鲁棒优化]
 level: intermediate
 prerequisites: [运筹学与组合优化, 概率基础]
 related: [桥梁型课程地图, CVaR 组合优化实验, 策略研究与回测]
-next: [Bellman 方程与动态规划, 供应链与库存优化]
+next: [Bellman 方程与动态规划, 供应链和库存控制]
 ---
 
 # 应用运筹学与产业决策
@@ -48,3 +48,10 @@ next: [Bellman 方程与动态规划, 供应链与库存优化]
 后续章节将使用小规模可手算问题建立基准，再扩展到随机需求、整数决策和不可行诊断。
 
 当前可运行示范：[Bellman 方程与动态规划](01-bellman-dynamic-programming.md)。
+
+## 当前章节
+
+- [供应链和库存控制](02-supply-chain-inventory.md)：EOQ、Newsvendor 和服务水平权衡。
+- [路径规划](03-routing-path-planning.md)：Dijkstra 基准与 VRP 扩展。
+- [收益管理与动态定价](04-revenue-management-pricing.md)：容量约束下的动态决策。
+- [制造排程](05-manufacturing-scheduling.md)：作业、机器、瓶颈与整数约束。

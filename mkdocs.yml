@@ -75,10 +75,24 @@ nav:
   - AI 基础模型与学习理论:
       - 领域总览: 14-ai-foundations/index.md
       - 梯度下降与反向传播: 14-ai-foundations/01-gradient-descent-and-backprop.md
-  - 生物医药数据科学: 15-biomedical-data/index.md
+      - Transformer 数学原理: 14-ai-foundations/02-transformer-mathematics.md
+      - 生成式模型与扩散模型: 14-ai-foundations/03-diffusion-models.md
+      - 强化学习理论: 14-ai-foundations/04-reinforcement-learning-theory.md
+      - 优化器与非凸优化: 14-ai-foundations/05-optimizers-and-nonconvex.md
+  - 生物医药数据科学:
+      - 领域总览: 15-biomedical-data/index.md
+      - 统计基因组学: 15-biomedical-data/01-statistical-genomics.md
+      - 高维数据挖掘: 15-biomedical-data/02-high-dimensional-data-mining.md
   - 应用运筹学与产业决策:
       - 领域总览: 16-applied-operations/index.md
       - Bellman 方程与动态规划: 16-applied-operations/01-bellman-dynamic-programming.md
+      - 供应链和库存控制: 16-applied-operations/02-supply-chain-inventory.md
+      - 路径规划: 16-applied-operations/03-routing-path-planning.md
+      - 收益管理与动态定价: 16-applied-operations/04-revenue-management-pricing.md
+      - 制造排程: 16-applied-operations/05-manufacturing-scheduling.md
+  - 量子计算:
+      - 领域总览: 17-quantum-computing/index.md
+      - 单量子比特与线性代数: 17-quantum-computing/01-quantum-linear-algebra.md
   - 策略研究:
       - 领域总览: 12-strategies/index.md
       - 研究工作流: 12-strategies/01-research-workflow.md
@@ -86,5 +100,6 @@ nav:
       - 项目总览: 13-capstones/index.md
       - Black-Scholes 与对冲风险实验: 13-capstones/01-option-risk-lab.md
       - CVaR 组合优化实验: 13-capstones/02-cvar-portfolio-lab.md
+      - 跨领域完整实验: 13-capstones/03-bridge-lab.md
   - 参考文献: references.md
   - 术语表: glossary.md

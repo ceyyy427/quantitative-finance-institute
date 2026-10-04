@@ -8,7 +8,7 @@ skills: [优化, 深度学习, 生成式 AI, 强化学习]
 level: intermediate
 prerequisites: [概率基础, 线性代数, 机器学习与时间序列]
 related: [桥梁型课程地图, 运筹学与组合优化, Monte Carlo 期权定价]
-next: [梯度下降与反向传播]
+next: [梯度下降与反向传播, Transformer 数学原理]
 ---
 
 # AI 基础模型与学习理论
@@ -48,5 +48,9 @@ AI 课程从数学对象开始：模型是函数族，训练是优化问题，�
 ## 当前可运行示范
 
 - [梯度下降与反向传播](01-gradient-descent-and-backprop.md)：从标量链式法则到 NumPy 网络和梯度检查。
+- [Transformer 数学原理](02-transformer-mathematics.md)：从缩放点积注意力到多头表示与复杂度。
+- [生成式模型与扩散模型](03-diffusion-models.md)：从最大似然和加噪过程到反向采样。
+- [强化学习理论](04-reinforcement-learning-theory.md)：从 MDP、Bellman 算子到策略梯度和离线评估。
+- [优化器与非凸优化](05-optimizers-and-nonconvex.md)：比较 SGD、Momentum、Adam，并分析非凸训练风险。
 
 高级生成式 AI、强化学习和基础模型页面先保持 `draft`，完成完整推导、代码和测试后再升级状态。

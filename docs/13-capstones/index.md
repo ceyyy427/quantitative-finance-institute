@@ -18,6 +18,7 @@ next: [期权风险实验]
 
 - [Black-Scholes 与对冲风险实验](01-option-risk-lab.md)：连接定价、Greeks、Delta 对冲、Monte Carlo 和 VaR/CVaR。
 - [CVaR 组合优化实验](02-cvar-portfolio-lab.md)：连接收益估计、协方差、凸优化、尾部风险和交易约束。
+- [跨领域完整实验](03-bridge-lab.md)：把 Transformer 特征、FDR、CVaR、库存和路径决策放进一条可复现管线。
 
 ## 项目验收标准
 
