@@ -2,8 +2,12 @@
 title: Markowitz 投资组合优化
 status: reviewed
 last_reviewed: 2026-10-04
-prerequisites: [probability-basics]
-related: [var-cvar, financial-time-series]
+domain: [运筹学, 线性代数, 金融]
+skills: [二次规划, 协方差, 拉格朗日乘子, 组合构建]
+level: intermediate
+prerequisites: [概率基础]
+related: [VaR 与 CVaR, 金融时间序列与波动率, 运筹学与组合优化]
+next: [VaR 与 CVaR, CVaR 组合优化实验]
 ---
 
 # Markowitz 投资组合优化
@@ -60,6 +64,30 @@ $$
 
 代码实现的是这个允许做空的解析解。若要求 $w_i\geq0$，问题变成带不等式约束的二次规划，需要使用专门优化器。
 
+### 拉格朗日推导
+
+构造
+
+$$
+\mathcal L(w,\lambda,\gamma)=\tfrac12w^\top\Sigma w-\lambda(\mathbf1^\top w-1)-\gamma(\mu^\top w-\mu_0).
+$$
+
+若 $\Sigma$ 正定，目标严格凸，任何满足一阶条件的点都是唯一全局最优解。一阶条件为
+
+$$
+\Sigma w=\lambda\mathbf1+\gamma\mu,
+$$
+
+因此 $w=\Sigma^{-1}(\lambda\mathbf1+\gamma\mu)$。将它代入两个等式约束，得到
+
+$$
+\begin{pmatrix}A&B\\B&C\end{pmatrix}
+\begin{pmatrix}\lambda\\\gamma\end{pmatrix}
+=\begin{pmatrix}1\\\mu_0\end{pmatrix},
+$$
+
+解这个 $2\times2$ 线性系统即可得到页面开头的权重公式。这个证明也说明 $D=AC-B^2>0$ 是约束问题可解且解唯一的关键条件。
+
 ## 可运行实现
 
 ```python
@@ -77,6 +105,10 @@ print(portfolio_volatility(weights, covariance))
 ## 估计风险
 
 Markowitz 解对 $\mu$ 和 $\Sigma$ 的估计误差很敏感。历史样本较短时，样本协方差矩阵可能不稳定，样本均值更难估计。实际工作中可以考虑收缩协方差、因子模型、稳健估计或滚动窗口，并用样本外结果比较模型。
+
+## 数值验证
+
+测试至少检查 $\mathbf1^\top w=1$、$\mu^\top w=\mu_0$ 和协方差矩阵维度。样本外验证时，均值和协方差只能用当时可见的数据估计；否则优化结果会把未来信息带入当前权重。
 
 ## 练习
 

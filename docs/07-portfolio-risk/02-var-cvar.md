@@ -2,8 +2,12 @@
 title: VaR 与 CVaR
 status: reviewed
 last_reviewed: 2026-10-04
-prerequisites: [probability-basics, markowitz-optimization]
-related: [financial-time-series, monte-carlo-pricing]
+domain: [概率, 风险管理, 运筹学, 金融]
+skills: [分位数, 尾部风险, 历史模拟, 风险回测]
+level: intermediate
+prerequisites: [概率基础, Markowitz 投资组合优化]
+related: [金融时间序列与波动率, Monte Carlo 期权定价, CVaR 组合优化实验]
+next: [金融时间序列与波动率, CVaR 组合优化实验]
 ---
 
 # VaR 与 CVaR
@@ -29,6 +33,19 @@ $$
 $$
 
 在连续分布下，它等于尾部损失的条件平均；离散样本中需要说明分位点插值和尾部包含规则。
+
+### CVaR 的尾部表示
+
+对可积损失变量 $L$，CVaR 可以写成 Rockafellar–Uryasev 表示
+
+$$
+\operatorname{CVaR}_\alpha(L)=\min_{t\in\mathbb R}\left[t+\frac1{1-\alpha}E[(L-t)^+]\right].
+$$
+
+当 $t$ 取在 VaR 分位点时，右侧等于尾部平均损失；对离散样本，这个表示还能把 CVaR 优化转成带辅助变量的线性规划。它是 CVaR 能直接进入组合优化的原因。
+
+!!! note "符号检查"
+    本站统一令 $L=-R$。如果数据表使用收益分位数，先取负号再计算，否则会把最好的收益尾部误当成最坏损失尾部。
 
 ## 三种估计方法
 
@@ -63,6 +80,10 @@ print(historical_cvar(returns, level=0.80))
 ```
 
 实现统一返回正的损失数值。若你的系统使用“收益分位数”而不是“损失分位数”，符号必须在报告中明确写出。
+
+## 数值验证
+
+历史法必须记录窗口长度、分位数插值规则和尾部包含规则；参数法必须记录分布假设；模拟法必须记录随机种子、路径数量和标准误。风险回测应把超过次数、超过幅度以及超过是否聚集分别报告。
 
 ## 风险回测
 

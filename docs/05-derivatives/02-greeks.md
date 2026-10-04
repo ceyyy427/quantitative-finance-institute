@@ -2,8 +2,12 @@
 title: Greeks 与期权敏感度
 status: reviewed
 last_reviewed: 2026-10-04
-prerequisites: [black-scholes, ito-lemma]
-related: [monte-carlo-pricing, var-cvar]
+domain: [数学, 金融, 计算机]
+skills: [微分, 敏感度分析, 对冲, 数值验证]
+level: intermediate
+prerequisites: [Black–Scholes 公式, Itô 引理]
+related: [Monte Carlo 期权定价, Delta 对冲, VaR 与 CVaR]
+next: [Delta 对冲, Monte Carlo 期权定价]
 ---
 
 # Greeks 与期权敏感度
@@ -39,6 +43,23 @@ $$
 $$
 
 这说明 Greeks 是局部近似的系数，而不是对大幅市场变化的精确预测。
+
+### Delta 的推导示例
+
+对看涨价格 $C=S_0N(d_1)-Ke^{-rT}N(d_2)$ 对 $S_0$ 求导。由于
+
+$$
+\frac{\partial d_1}{\partial S_0}=\frac1{S_0\sigma\sqrt T},\qquad
+\frac{\partial d_2}{\partial S_0}=\frac1{S_0\sigma\sqrt T},
+$$
+
+链式法则给出
+
+$$
+\frac{\partial C}{\partial S_0}=N(d_1)+S_0\phi(d_1)\frac{\partial d_1}{\partial S_0}-Ke^{-rT}\phi(d_2)\frac{\partial d_2}{\partial S_0}.
+$$
+
+由正态密度恒等式 $S_0\phi(d_1)=Ke^{-rT}\phi(d_2)$，后两项相消，因此 $\Delta_C=N(d_1)$。这说明 Delta 不是经验系数，而是价格函数的严格偏导数。
 
 ## 主要 Greeks
 
@@ -87,6 +108,16 @@ print(vega(*args))
 ```
 
 实现位于 `src/quantmath/greeks.py`，测试用 Black–Scholes 的标准参数检查参考值。
+
+## 数值验证与单位
+
+可以用中心有限差分
+
+$$
+\Delta_{\mathrm{FD}}(h)=\frac{C(S_0+h)-C(S_0-h)}{2h}
+$$
+
+检查解析 Delta。应在一段合理的 $h$ 区间内收敛；极小的 $h$ 会放大浮点舍入误差。Vega 的公式以波动率小数变化为单位，Theta 的符号取决于你把 $T$ 作为剩余期限还是日历时间，因此报告时必须写清楚约定。
 
 ## 练习
 

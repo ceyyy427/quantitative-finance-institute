@@ -2,6 +2,12 @@
 title: Monte Carlo 期权定价
 status: reviewed
 last_reviewed: 2026-10-04
+domain: [数值分析, 计算机, 金融]
+skills: [Monte Carlo, 概率, 随机数, 误差分析]
+level: intermediate
+prerequisites: [概率基础, Black–Scholes 公式]
+related: [Delta 对冲, VaR 与 CVaR, 金融时间序列与波动率]
+next: [VaR 与 CVaR, Black-Scholes 与对冲风险实验]
 ---
 
 # Monte Carlo 期权定价
@@ -47,6 +53,22 @@ $$
 
 其中 $Y_i=e^{-rT}(S_T^{(i)}-K)^+$，$s_Y$ 是样本标准差。
 
+### 无偏性与标准误的证明
+
+令 $Y_i=e^{-rT}(S_T^{(i)}-K)^+$，并假设 $Y_i$ 独立同分布且 $E|Y_i|<\infty$。线性性给出
+
+$$
+E[\widehat C_M]=E\left[\frac1M\sum_{i=1}^M Y_i\right]=\frac1M\sum_{i=1}^M E[Y_i]=C_0,
+$$
+
+所以样本均值是无偏估计量。若方差有限，独立性给出
+
+$$
+\operatorname{Var}(\widehat C_M)=\frac1{M^2}\sum_{i=1}^M\operatorname{Var}(Y_i)=\frac{\operatorname{Var}(Y)}M.
+$$
+
+将未知的 $\operatorname{Var}(Y)$ 用样本方差替换，就得到 $s_Y/\sqrt M$ 的标准误估计。中心极限定理只说明大样本近似，不会消除模型设定误差。
+
 ## 可运行实现
 
 ```python
@@ -67,6 +89,10 @@ print(estimate, standard_error, reference)
 ```
 
 代码返回价格估计和标准误差。测试用解析 Black–Scholes 价格作为基准，要求 Monte Carlo 误差落在 $4$ 个标准误差内。
+
+## 数值验证
+
+固定种子用于回归测试，多种子重复用于稳健性分析。对同一组参数记录 $M$ 与标准误，检查 $M$ 增大十倍时标准误大约缩小 $\sqrt{10}$ 倍；若不符合，先检查样本是否独立、贴现因子是否只乘一次以及路径是否使用风险中性漂移。
 
 ## 收敛与误差
 

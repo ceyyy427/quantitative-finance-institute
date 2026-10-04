@@ -2,8 +2,12 @@
 title: 金融时间序列与波动率
 status: reviewed
 last_reviewed: 2026-10-04
-prerequisites: [probability-basics]
-related: [markowitz-optimization, var-cvar, monte-carlo-pricing]
+domain: [统计, 时间序列, 金融]
+skills: [收益率, 自相关, ARMA/GARCH, 滚动验证]
+level: intermediate
+prerequisites: [概率基础]
+related: [Markowitz 投资组合优化, VaR 与 CVaR, Monte Carlo 期权定价, 机器学习与时间序列]
+next: [VaR 与 CVaR, 机器学习与时间序列, 量化策略研究工作流]
 ---
 
 # 金融时间序列与波动率
@@ -41,6 +45,22 @@ $$
 
 当 $|\phi|<1$ 时，过程围绕长期均值 $c/(1-\phi)$ 波动。若收益率存在明显自相关，AR 项可以解释条件均值；但很多金融收益率的线性自相关很弱，预测难点往往转移到条件方差。
 
+### AR(1) 长期均值的推导
+
+对模型取期望并假设平稳均值 $m=E[r_t]$ 存在：
+
+$$
+m=c+\phi m,
+$$
+
+因此 $(1-\phi)m=c$，当 $|\phi|<1$ 时得到 $m=c/(1-\phi)$。反复代入还能写成
+
+$$
+r_t=\frac{c}{1-\phi}+\sum_{j=0}^{\infty}\phi^j\varepsilon_{t-j},
+$$
+
+几何级数收敛正是平稳解存在的原因。若 $|\phi|\ge1$，这个无限和一般不收敛，不能直接使用同样的长期均值解释。
+
 ## 波动率聚集与 GARCH
 
 GARCH(1,1) 模型写为
@@ -71,6 +91,10 @@ print(fit_ar1(returns))
 ```
 
 这个最小实现只做数据变换、样本自相关和 AR(1) OLS 拟合。正式 GARCH 建模还需要残差诊断、分布选择、滚动预测和样本外回测。
+
+## 数值验证
+
+先用已知序列手算一阶对数收益率，再用 `log_returns` 对照；对 AR(1) 结果同时检查样本长度、滞后对齐和截距定义。任何预测都必须以时间顺序切分，并在训练窗口之外评估。
 
 ## 建模工作流
 
