@@ -1,7 +1,7 @@
 site_name: Quantitative Finance Institute
 site_description: A Chinese-first, reproducible knowledge base for quantitative finance mathematics.
-site_url: https://YOUR_GITHUB_USERNAME.github.io/quantitative-finance-institute/
-repo_url: https://github.com/YOUR_GITHUB_USERNAME/quantitative-finance-institute
+site_url: https://ceyyy427.github.io/quantitative-finance-institute/
+repo_url: https://github.com/ceyyy427/quantitative-finance-institute
 repo_name: quantitative-finance-institute
 language: zh
 strict: true
