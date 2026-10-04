@@ -1,5 +1,5 @@
 site_name: Quantitative Finance Institute
-site_description: A Chinese-first, reproducible knowledge base for quantitative finance mathematics.
+site_description: A Chinese-first, reproducible bridge from mathematical foundations to AI, finance, biomedicine, and operations research.
 site_url: https://ceyyy427.github.io/quantitative-finance-institute/
 repo_url: https://github.com/ceyyy427/quantitative-finance-institute
 repo_name: quantitative-finance-institute
@@ -47,6 +47,7 @@ nav:
   - 首页: index.md
   - 学习路线: syllabus.md
   - 学习路径: learning-paths.md
+  - 桥梁型课程地图: bridge-curriculum.md
   - 知识地图: knowledge-map.md
   - 基础:
       - 概率基础: 00-foundations/01-probability-basics.md
@@ -70,6 +71,11 @@ nav:
   - 计算机科学: 09-computer-science/index.md
   - 运筹学与组合优化: 10-operations-research/index.md
   - 机器学习与时间序列: 11-machine-learning/index.md
+  - AI 基础模型与学习理论:
+      - 领域总览: 14-ai-foundations/index.md
+      - 梯度下降与反向传播: 14-ai-foundations/01-gradient-descent-and-backprop.md
+  - 生物医药数据科学: 15-biomedical-data/index.md
+  - 应用运筹学与产业决策: 16-applied-operations/index.md
   - 策略研究:
       - 领域总览: 12-strategies/index.md
       - 研究工作流: 12-strategies/01-research-workflow.md

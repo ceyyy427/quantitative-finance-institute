@@ -22,6 +22,9 @@
 | [运筹学与组合优化](10-operations-research/index.md) | [Markowitz 优化](07-portfolio-risk/01-markowitz-optimization.md) | 目标函数和约束决定可行组合 |
 | [机器学习与时间序列](11-machine-learning/index.md) | [策略研究](12-strategies/index.md) | 时间序列验证控制预测到交易的泄露 |
 | [策略研究](12-strategies/index.md) | [综合实验](13-capstones/index.md) | 研究闭环把模型、代码和风险报告连接起来 |
+| [桥梁型课程地图](bridge-curriculum.md) | [AI 基础模型与学习理论](14-ai-foundations/index.md) | 数学定义、优化和工程实现形成共同必修 |
+| [AI 基础模型与学习理论](14-ai-foundations/index.md) | [生物医药数据科学](15-biomedical-data/index.md) | 高维统计、机器学习和可复现工程迁移到生物数据 |
+| [AI 基础模型与学习理论](14-ai-foundations/index.md) | [应用运筹学与产业决策](16-applied-operations/index.md) | 预测模型连接到约束决策与系统优化 |
 | [Delta 对冲](05-derivatives/03-delta-hedging.md) | [Black-Scholes 与对冲风险实验](13-capstones/01-option-risk-lab.md) | 把 Greeks、动态持仓和尾部风险放入同一实验 |
 | [VaR 与 CVaR](07-portfolio-risk/02-var-cvar.md) | [CVaR 组合优化实验](13-capstones/02-cvar-portfolio-lab.md) | 把尾部风险表示转成组合优化目标 |
 
@@ -37,6 +40,9 @@
 | 怎样把数学模型做成可复现实验？ | [计算机科学](09-computer-science/index.md) | [综合实验](13-capstones/index.md) |
 | 怎样把尾部风险写进优化问题？ | [运筹学与组合优化](10-operations-research/index.md) | [VaR/CVaR](07-portfolio-risk/02-var-cvar.md) |
 | 怎样避免机器学习的时间泄露？ | [机器学习与时间序列](11-machine-learning/index.md) | [策略研究](12-strategies/index.md) |
+| 怎样学习 AI 的数学原理并完成工程实现？ | [AI 基础模型与学习理论](14-ai-foundations/index.md) | [梯度下降与反向传播](14-ai-foundations/01-gradient-descent-and-backprop.md) |
+| 怎样把高维数据方法用于生物医药？ | [生物医药数据科学](15-biomedical-data/index.md) | [AI 基础模型与学习理论](14-ai-foundations/index.md) |
+| 怎样把优化用于供应链、定价和排程？ | [应用运筹学与产业决策](16-applied-operations/index.md) | [运筹学与组合优化](10-operations-research/index.md) |
 
 ## 每篇文章的关联结构
 

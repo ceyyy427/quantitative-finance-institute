@@ -2,7 +2,8 @@
 title: 学习路径
 status: reviewed
 last_reviewed: 2026-10-04
-domain: [数学, 金融, 计算机, 运筹学, 机器学习]
+domain: [数学, 金融, 计算机, 运筹学, 机器学习, AI, 生物医药]
+track: core
 skills: [学习规划, 知识关联]
 level: foundation
 prerequisites: []
@@ -13,6 +14,21 @@ next: [概率基础]
 # 学习路径
 
 本站把量化金融看成一组可以互相验证的技能，而不是一串孤立章节。选择与你当前背景最接近的入口，然后沿着链接学习和实践。
+
+如果你的目标是跨学科建模，请先看[桥梁型课程地图](bridge-curriculum.md)。它把数学定义、理论证明、工程实现、系统优化和行业应用放进同一条能力链。
+
+## 数理背景学生的共同必修
+
+```text
+概率与线性代数
+→ 机器学习优化
+→ 深度学习数学
+→ 生成式 AI 与基础模型
+→ 强化学习理论
+→ 数据科学工程
+```
+
+入口：[AI 基础模型与学习理论](14-ai-foundations/index.md)。金融、生物医药和运筹学作为应用层，要求把同一个数学对象迁移到新的数据、约束和风险环境中。
 
 ## 数学专业 → 定价与风险
 
@@ -76,3 +92,6 @@ next: [概率基础]
 | 如何把公式变成数值算法？ | [Monte Carlo 定价](06-numerical/01-monte-carlo-pricing.md) | [期权风险实验](13-capstones/01-option-risk-lab.md) |
 | 如何让组合控制尾部风险？ | [Markowitz 优化](07-portfolio-risk/01-markowitz-optimization.md) | [VaR 与 CVaR](07-portfolio-risk/02-var-cvar.md) |
 | 如何开始一项策略研究？ | [研究工作流](12-strategies/01-research-workflow.md) | [综合实验项目](13-capstones/01-option-risk-lab.md) |
+| 如何理解 AI 算法的数学原理并写出代码？ | [AI 基础模型与学习理论](14-ai-foundations/index.md) | [梯度下降与反向传播](14-ai-foundations/01-gradient-descent-and-backprop.md) |
+| 如何把数学、数据科学和生物学连接起来？ | [生物医药数据科学](15-biomedical-data/index.md) | 高维统计与统计基因组学 |
+| 如何把优化用于供应链、路径和生产排程？ | [应用运筹学与产业决策](16-applied-operations/index.md) | [CVaR 组合优化实验](13-capstones/02-cvar-portfolio-lab.md) |
