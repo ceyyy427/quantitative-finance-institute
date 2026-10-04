@@ -16,9 +16,11 @@
 
 完整路线见 [学习路线](docs/syllabus.md)。
 
+知识之间的依赖和推荐阅读顺序见 [知识地图](docs/knowledge-map.md)。
+
 ## 当前状态
 
-项目处于 `v0.2.0` 初始阶段。当前内容覆盖概率、随机过程、Itô 引理、二叉树风险中性定价和 Black–Scholes；下一步加入 Monte Carlo 定价。
+项目处于 `v0.3.0` 初始阶段。当前内容覆盖概率、随机过程、Itô 引理、资产定价、Black–Scholes、Greeks、Monte Carlo、组合优化、VaR/CVaR 和时间序列。
 
 ## 本地运行
 
