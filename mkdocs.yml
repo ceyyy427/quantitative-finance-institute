@@ -3,7 +3,6 @@ site_description: A Chinese-first, reproducible knowledge base for quantitative 
 site_url: https://ceyyy427.github.io/quantitative-finance-institute/
 repo_url: https://github.com/ceyyy427/quantitative-finance-institute
 repo_name: quantitative-finance-institute
-language: zh
 strict: true
 
 theme:
