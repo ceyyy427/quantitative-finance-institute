@@ -25,8 +25,8 @@ def european_call_monte_carlo(
         raise ValueError("spot and strike must be positive")
     if volatility <= 0 or maturity <= 0:
         raise ValueError("volatility and maturity must be positive")
-    if paths < 2:
-        raise ValueError("paths must be at least 2")
+    if not isinstance(paths, (int, np.integer)) or isinstance(paths, bool) or paths < 2:
+        raise ValueError("paths must be an integer of at least 2")
     if not all(math.isfinite(value) for value in (spot, strike, rate, volatility, maturity)):
         raise ValueError("all inputs must be finite")
 

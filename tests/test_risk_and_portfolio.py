@@ -23,3 +23,17 @@ def test_normal_cvar_exceeds_normal_var():
     var = normal_var(0.0, 0.02, level=0.95)
     cvar = normal_cvar(0.0, 0.02, level=0.95)
     assert cvar > var
+
+
+def test_historical_risk_rejects_non_finite_returns():
+    with pytest.raises(ValueError, match="finite"):
+        historical_var(np.array([0.01, np.nan, -0.02]), level=0.95)
+
+
+def test_normal_risk_rejects_non_finite_parameters():
+    with pytest.raises(ValueError, match="finite"):
+        normal_var(float("nan"), 0.02, level=0.95)
+
+
+def test_normal_risk_allows_zero_volatility():
+    assert normal_var(0.01, 0.0, level=0.95) == pytest.approx(-0.01)

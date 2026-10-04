@@ -16,3 +16,17 @@ def test_put_call_parity():
     put = black_scholes_put(spot, strike, rate, volatility, maturity)
     expected = spot - strike * math.exp(-rate * maturity)
     assert call - put == pytest.approx(expected, abs=1e-10)
+
+
+@pytest.mark.parametrize(
+    ("spot", "strike", "volatility", "maturity"),
+    [(0.0, 100.0, 0.20, 1.0), (100.0, -1.0, 0.20, 1.0), (100.0, 100.0, 0.0, 1.0)],
+)
+def test_black_scholes_rejects_non_positive_domain(spot, strike, volatility, maturity):
+    with pytest.raises(ValueError):
+        black_scholes_call(spot, strike, 0.05, volatility, maturity)
+
+
+def test_black_scholes_rejects_non_finite_inputs():
+    with pytest.raises(ValueError, match="finite"):
+        black_scholes_call(100.0, 100.0, float("nan"), 0.20, 1.0)
